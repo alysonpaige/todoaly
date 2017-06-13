@@ -35,7 +35,9 @@
     function toggleTask(e) {
       var itemId = $(e.target).data("id");
 
+
       var doneValue = Boolean($(e.target).is(':checked'));
+
 
       $.post("/tasks/" + itemId, {
         _method: "PUT",
